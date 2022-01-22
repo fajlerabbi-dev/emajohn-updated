@@ -16,7 +16,7 @@ const Product = (props) => {
         {props.disableLink ? (
           <h4>{name}</h4>
         ) : (
-          <Link to={`/product/${key}`} params={props.product}>
+          <Link to={`/product/${key}`}>
             <h4>{name}</h4>
           </Link>
         )}

@@ -4,7 +4,10 @@ import './Cart.css';
 
 const Cart = (props) => {
   const cart = props.cart;
-  const totalPrice = cart.reduce((total, pdp) => total + pdp.price, 0);
+  const totalPrice = cart.reduce((total, pdp) => {
+    // console.log(typeof pdp.price, pdp.quantity);
+    return total + pdp.price * pdp.quantity;
+  }, 0);
 
   // round the number function
   const rtn = (num) => {
@@ -25,12 +28,15 @@ const Cart = (props) => {
         <small>Tax + VAT:{tax}</small>
       </div>
       <div>
-        <strong>Total Product Price: ${rtn(totalPrice + shippingCost + tax)}</strong>
+        <strong>
+          Total Product Price: ${rtn(totalPrice + shippingCost + tax)}
+        </strong>
         <br />
-        <Link to="/order"><button>Review Order</button></Link>
+        <br />
+      {
+        props.children
+      }
       </div>
-
-
     </div>
   );
 };
