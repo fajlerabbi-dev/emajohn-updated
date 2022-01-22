@@ -1,0 +1,38 @@
+.header {
+  padding: 20px 0 0 0;
+}
+
+.site-logo img {
+  max-width: 300px;
+}
+
+.site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation ul li {
+  display: inline-block;
+}
+
+.site-navigation ul li:not(last-child) {
+  margin-right: 20px;
+}
+
+.site-navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  transition: 0.4s;
+}
+
+.site-navigation {
+  background: #000;
+  margin-top: 20px;
+}
+
+.site-navigation ul li a:hover {
+  background: #ff9800;
+}
